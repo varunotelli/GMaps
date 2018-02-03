@@ -31,11 +31,13 @@ def index():
                 route["duration"] = r1["duration"]["text"]
                 for r2 in r1["steps"]:
                     route["steps"].append(r2["html_instructions"])
+                    route["start"]=r2["start_location"]
+                    route["end"]=r2["end_location"]
 
         # route=jsondata["routes"][0]["legs"][0]["steps"][0]["html_instructions"]
         # duration=jsondata["routes"][0]["legs"][0]["duration"]["text"]
         # print(route)
-        return jsonify(summary=route["summary"], duration=route["duration"], steps=route["steps"])
+        return jsonify(summary=route["summary"], duration=route["duration"], steps=route["steps"],start=route["start"],end=route["end"])
     return render_template('forms.html')
 
 @app.route('/query')
