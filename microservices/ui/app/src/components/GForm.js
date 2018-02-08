@@ -117,7 +117,7 @@ class GForm extends Component {
     nodes[0].childNodes[1].value = "";
     nodes[1].childNodes[1].value = "";
     nodes[2].childNodes[1].value = "Driving";
-    //hide instructions div
+    //hide instructions div when form is reset.
     let instructdiv = document.getElementById("instructions-div").classList;
     instructdiv.remove("instructions-visible");
     instructdiv.add("instructions-hidden");
