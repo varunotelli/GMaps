@@ -1,0 +1,7 @@
+- alias: hasura
+  config:
+    configmap: controller-conf
+    namespace: dutifulness58-hasura
+  data: null
+  kubeContext: dutifulness58
+  name: dutifulness58
