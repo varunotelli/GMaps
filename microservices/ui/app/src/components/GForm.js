@@ -29,7 +29,7 @@ class GForm extends Component {
 
   //stores data in local storage if no previous data is present
   componentWillUpdate(nextProps, nextState) {
-    if (!sessionStorage.getItem("start") || nextState.start.length !== 0) {
+    if ((nextState.start.length !== 0) || (sessionStorage.getItem("start") && sessionStorage.getItem("start") !== null)) {
       sessionStorage.setItem("start", JSON.stringify(nextState.start));
       sessionStorage.setItem("destination",JSON.stringify(nextState.destination));
       sessionStorage.setItem("profile", JSON.stringify(nextState.profile));
@@ -84,9 +84,9 @@ class GForm extends Component {
     let destination = nodes[1].childNodes[1].value;
     let profile = nodes[2].childNodes[1].value;
     let vals = [start, destination, profile];
-
+    //the url is updated to secure https
     fetch(
-      `http://app.dutifulness58.hasura-app.io/directions?origin=${start}&destination=${destination}&mode=${profile}`   )
+      `https://app.dutifulness58.hasura-app.io/directions?origin=${start}&destination=${destination}&mode=${profile}`   )
       .then(response => response.json())
       .then(parsedJSON => this.fetchUpdatesState(parsedJSON, vals))
       .catch(function(err) {
@@ -117,7 +117,7 @@ class GForm extends Component {
     nodes[0].childNodes[1].value = "";
     nodes[1].childNodes[1].value = "";
     nodes[2].childNodes[1].value = "Driving";
-    //hide instructions div when form is reset.
+    //hide instructions div
     let instructdiv = document.getElementById("instructions-div").classList;
     instructdiv.remove("instructions-visible");
     instructdiv.add("instructions-hidden");
