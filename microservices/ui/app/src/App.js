@@ -24,7 +24,7 @@ class App extends Component {
       <div className="App">
         <GForm  />
         <MapWithAMarker isMarkerShown
-          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4R6AN7SmujjPUIGKdyao2Kqitzr1kiRg&v=3.exp&libraries=geometry,drawing,places"
+          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4SIKc9SIlKRgVejKcd9WEDNGMiSo_EdE&v=3.exp&libraries=geometry,drawing,places"
           loadingElement={<div style={{ height: `100%` }} />}
           containerElement={<div style={{ height: `700px` }} />}
           mapElement={<div className="container-fluid" id="mapElement" style={{ height: `100%` }} />}
