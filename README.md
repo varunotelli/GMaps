@@ -1,4 +1,4 @@
-# hello-python-flask
+# GMaps
 
 Boilerplate Hasura project with [Flask](http://flask.pocoo.org/) microservice.
 
