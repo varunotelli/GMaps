@@ -15,21 +15,21 @@ Boilerplate Hasura project with [Flask](http://flask.pocoo.org/) microservice.
 
 ```bash
 # Quickstart from this boilerplate 
-$ hasura quickstart hello-python-flask
+$ hasura clone varunotelli/GMaps
 ```
 
-The `quickstart` command does the following:
+The `clone` command does the following:
 
-1. Creates a new directory `hello-python-flask` in the current working directory
+1. Creates a new directory `GMaps` in the current working directory
 2. Creates a free Hasura cluster and sets it as the default for this project
-3. Sets up `hello-python-flask` as a git repository and adds `hasura` remote to push code
+3. Sets up `GMaps` as a git repository and adds `hasura` remote to push code
 4. Adds your SSH public key to the cluster so that you can push to it
 
 ### Deploy
 
 ```bash
 # Navigate to the project directory
-$ cd hello-python-flask
+$ cd GMaps
 
 # git add, commit and push to deploy
 $ git add . && git commit -m "First commit"
